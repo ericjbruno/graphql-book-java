@@ -1,2 +1,2 @@
-GraphQL Programming with Java
+GraphQL Programming with Java\n
 Eric J. Bruno
