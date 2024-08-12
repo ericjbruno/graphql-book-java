@@ -1,0 +1,26 @@
+type Query {
+    version: Version
+    artists: [Artist]
+    songsByArtist(artistId: ID): [Song]
+    song(id: ID): Song
+    artist(id: ID): Artist
+}
+
+type Song {
+    id: ID
+    name: String
+    length: Int
+    artist: Artist
+}
+
+type Artist {
+    id: ID
+    name: String
+    songs: [Song]
+}
+
+type Version {
+    major: String
+    minor: String
+}
+

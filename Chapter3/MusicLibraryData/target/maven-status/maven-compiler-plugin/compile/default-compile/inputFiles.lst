@@ -1,0 +1,9 @@
+/home/ebruno/Dropbox/dev/graphql-book/Chapter3/MusicLibraryData/src/main/java/com/ericbruno/musiclibrarydata/SongQueryResolver.java
+/home/ebruno/Dropbox/dev/graphql-book/Chapter3/MusicLibraryData/src/main/java/com/ericbruno/musiclibrarydata/VersionQueryResolver.java
+/home/ebruno/Dropbox/dev/graphql-book/Chapter3/MusicLibraryData/src/main/java/com/ericbruno/musiclibrarydata/Version.java
+/home/ebruno/Dropbox/dev/graphql-book/Chapter3/MusicLibraryData/src/main/java/com/ericbruno/musiclibrarydata/QueryResolver.java
+/home/ebruno/Dropbox/dev/graphql-book/Chapter3/MusicLibraryData/src/main/java/com/ericbruno/musiclibrarydata/ArtistsQueryResolver.java
+/home/ebruno/Dropbox/dev/graphql-book/Chapter3/MusicLibraryData/src/main/java/com/ericbruno/musiclibrarydata/Artist.java
+/home/ebruno/Dropbox/dev/graphql-book/Chapter3/MusicLibraryData/src/main/java/com/ericbruno/musiclibrarydata/ArtistQueryResolver.java
+/home/ebruno/Dropbox/dev/graphql-book/Chapter3/MusicLibraryData/src/main/java/com/ericbruno/musiclibrarydata/Song.java
+/home/ebruno/Dropbox/dev/graphql-book/Chapter3/MusicLibraryData/src/main/java/com/ericbruno/musiclibrarydata/SongsByArtistQueryResolver.java

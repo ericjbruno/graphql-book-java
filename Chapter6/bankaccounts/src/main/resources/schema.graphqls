@@ -1,0 +1,98 @@
+type Mutation {
+    addCustomer(lastName: String,
+                firstName: String, 
+                email: String,
+                street: String,
+                city: String,
+                state: States,
+                zip: String,
+                phone: String,
+                ssn: String): ID
+
+    addAccount( account: AccountInput ): ID
+    addTransaction( accountId: ID!,
+                    amount: Float): Boolean
+}
+
+type Query {
+    customers: [Customer]
+    customer(customerId: ID!): Customer
+    accounts: [Account!]
+    account(accountId: ID!): Account
+    entities: [Entity]
+    accountsByCustomer(customerId: ID!): [Account!]
+    accountsByType(type: AccountType!, customerId: ID): [Account!]
+    balance(accountId: ID!): Balance @bankapp_auth(role : "accountOwner")
+    totalDeposits(customerId:ID): Float
+}
+
+type Subscription {
+    newBalance(accountId: ID): BalanceUpdate
+}
+
+directive @bankapp_auth(role : String!) on FIELD_DEFINITION
+
+type BalanceUpdate {
+    balance: Float
+}
+
+type Account {
+    id: ID!
+    active: Boolean
+    name: String
+    type: AccountType
+    owner: Customer
+    availableBalance: Balance @bankapp_auth(role : "accountOwner")
+    totalBalance: Balance @bankapp_auth(role : "accountOwner")
+}
+
+input AccountInput {
+    ownerId: ID,
+    name: String,
+    type: AccountType,
+    balance: Float
+}
+
+enum AccountType {
+    BASIC_CHECKING
+    ADVANCED_CHECKING
+    BUSINESS_CHECKING
+    SAVINGS
+}
+
+type Balance {
+    amount: Float
+    asOf: String
+}
+
+type Customer {
+    id: ID!
+    active: Boolean
+    firstName: String
+    lastName: String
+    address: Address
+    phone: String
+    ssn: String
+    email: String
+}
+
+enum States {
+    NEW_YORK
+    NEW_JERSEY
+    CALIFORNIA
+    unknown
+    #...
+}
+
+type Address {
+    street: String
+    city: String
+    state: States
+    zip: String
+}
+
+union Entity = Customer | Account
+
+
+
+

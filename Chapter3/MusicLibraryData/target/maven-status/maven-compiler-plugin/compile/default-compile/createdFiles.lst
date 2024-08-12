@@ -1,0 +1,9 @@
+com/ericbruno/musiclibrarydata/SongQueryResolver.class
+com/ericbruno/musiclibrarydata/Version.class
+com/ericbruno/musiclibrarydata/Artist.class
+com/ericbruno/musiclibrarydata/ArtistQueryResolver.class
+com/ericbruno/musiclibrarydata/QueryResolver.class
+com/ericbruno/musiclibrarydata/Song.class
+com/ericbruno/musiclibrarydata/ArtistsQueryResolver.class
+com/ericbruno/musiclibrarydata/SongsByArtistQueryResolver.class
+com/ericbruno/musiclibrarydata/VersionQueryResolver.class

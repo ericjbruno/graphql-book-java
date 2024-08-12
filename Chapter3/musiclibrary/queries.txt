@@ -1,0 +1,82 @@
+# query {
+#   allPhotos {
+#     name
+#     id
+# 		postedBy {
+# 		  name
+# 		  avatar
+# 		}
+#   }
+# }
+
+# query {
+#   allUsers {
+#     name
+#     avatar
+#     postedPhotos {
+#       id
+#       name
+#     }
+#   }
+# }
+
+# mutation {
+#   addUser(githubLogin: "ebruno", name: "Eric Bruno") {
+#     name
+#     avatar
+#   }
+# }
+
+# mutation {
+#   postPhoto(name: "Photo2", description: "My Photo 2", postedByUsername: "Eric Bruno") {
+#     id
+#     name
+#     postedBy {
+#       name
+#       avatar
+#     }
+#   }
+# }
+
+# query {
+#   artists {
+#     id
+#   }
+# }
+
+# query {
+#   songById(id:"song1") {
+#     Id
+#     name
+#   }
+# }
+
+# query {
+#   songsByArtist(artistId:"artist2") {
+#     name
+#     length
+#     artist {
+#       name
+#     }
+#   }
+# }
+
+query {
+  artist(id: "artist1") {
+    id
+    songs {
+      name
+    }
+  } 
+}
+
+# query {
+#   bookById(id:"book-1") {
+#     name,
+#     pageCount,
+#     author {
+#       firstName
+#       lastName
+#     },
+#   }
+# }

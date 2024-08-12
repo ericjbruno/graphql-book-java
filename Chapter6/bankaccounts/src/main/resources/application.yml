@@ -1,0 +1,12 @@
+graphql:
+  enabled: true
+  graphiql: # enables the /graphiql endpoint to test calls against your graph.
+    enabled: true
+        
+#  graphql-ws:
+#      enabled: true
+#      path: /graphql
+  
+  graphql-apollo-ws:
+    enabled: true
+    path: /graphql

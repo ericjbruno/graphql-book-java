@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.ericbruno</groupId>
+    <artifactId>MusicLibraryData</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.github.kobylynskyi</groupId>
+                <artifactId>graphql-codegen-maven-plugin</artifactId>
+                <!-- use the latest available version:
+                https://search.maven.org/artifact/io.github.kobylynskyi/graphql-codegen-maven-plugin -->
+                <version>5.10.0</version>
+                <executions>
+                    <execution>
+                        <id>graphql-codegen</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <generateToString>true</generateToString>
+                            <generateClient>false</generateClient>
+                            <generateBuilder>false</generateBuilder>
+                            <packageName>com.ericbruno.musiclibrarydata</packageName>
+                            <graphqlSchemaPaths>${project.basedir}/../musiclibrary/src/main/resources/schema.graphqls</graphqlSchemaPaths>
+                            <outputDir>${project.basedir}/src/main/java/</outputDir>
+                        </configuration>
+                    </execution>
+                </executions>    
+            </plugin>
+        </plugins>
+    </build>
+</project>
